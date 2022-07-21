@@ -9,22 +9,29 @@ let inputCriancas = document.getElementById("criancas");
 let inputDuracao = document.getElementById("duracao");
 
 let resultado = document.getElementById("resultado");
+let resultado2 = document.getElementById("resultado2");
 
 function calcular(){
     let adultos = inputAdultos.value;
     let criancas = inputCriancas.value;
     let duracao = inputDuracao.value;
+    
+    let carne = carnePP(duracao);
+    let cerveja = cervejaPP(duracao);
+    let bebidas = bebidasPP(duracao);
 
-    let qtdTotalCarne = carnePP(duracao) * adultos + (carnePP(duracao)/2)*criancas;
-    let qtdTotalCerveja = cervejaPP(duracao) * adultos;
-    let qtdTotalBebidas = bebidasPP(duracao) * adultos + (bebidasPP(duracao)/2)*criancas;
+
+    let qtdTotalCarne = (carne * adultos + (carne/2)*criancas)/1000;
+    let qtdTotalCerveja = (cerveja * adultos)/1000;
+    let qtdTotalBebidas = (bebidas * adultos + (bebidas/2)*criancas)/1000;
     console.log(qtdTotalBebidas, qtdTotalCarne, qtdTotalCerveja);
 
-    resultado.innerHTML = `<p>${qtdTotalCarne}g de Carne</p>`
-    resultado.innerHTML += `<p>${qtdTotalCerveja}g de Cerveja</p>`
-    resultado.innerHTML += `<p>${qtdTotalBebidas}g de Bebidas</p>`
+    resultado.innerHTML = `<p><img src="./imagens/carne.png">${qtdTotalCarne}Kg de Carne</p>`
+    resultado.innerHTML += `<p><img src="./imagens/cerveja.png">${qtdTotalCerveja}L de Cerveja</p>`
+    resultado.innerHTML += `<p><img src="./imagens/refri.png">${qtdTotalBebidas}L de Bebidas</p>`
 
-
+    resultado2.innerHTML = `<h3 class ="calc">Gostaria de calcular o valor do churras?</h3>`
+    resultado2.innerHTML += `<h3 class ="calc" ><img src="./imagens/relogio.png"> Em breve</h3>`
 }
 
 function carnePP(duracao){

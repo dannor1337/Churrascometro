@@ -5,20 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./styles/style.css">
-    <title>Document</title>
+    <title>Churrascômetro</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Churrascometro</h1>
-        <input id="adultos" name="adultos" type="number" placeholder="Adultos">
-        <input id="criancas" name="criancas" type="number" placeholder="Crianças">
-        <input id="duracao" name="duracao" type="number" placeholder="Duração">
-        <button onclick="calcular()">Calcular</button>
-
-        <div id="resultado">
-    
+    <div class="fundo">
+        <div class="container">
+            <h1>Churrascômetro</h1>
+            <p>Serão quantos adultos?</p>
+            <input id="adultos" name="adultos" type="number" placeholder="Adultos">
+            <p>Serão quantas crianças</p>
+            <input id="criancas" name="criancas" type="number" placeholder="Crianças">
+            <p>O churras vai durar quantas horas?</p>
+            <input id="duracao" name="duracao" type="number" placeholder="Duração">
+            <div id="pbotao">
+                <button class="botao" onclick="calcular()">Calcular</button>
+            </div>
+            <div id="resultado"></div>
         </div>
+        <div class="painel">
+            <h2>Seja Bem vindo ao Churrascômetro!</h2>
+            <h2>O melhor parceiro para decidir como começar o churras.</h2>
+            <div id="resultado2"></div>
+        </div>
+        </div>
+        
     </div>
+    <!-- <div class="container2">
+        <h1>Bem vindo ao Churrascômetro</h1>
+    </div> -->
     <script src="./scripts/script.js"></script>
 </body>
 </html>

@@ -1,16 +1,99 @@
- .container{
-        font-family:Arial, Helvetica, sans-serif;
-        max-width: 300px;
-        margin: auto;
-        background-color:rgba(81, 197, 206, 0.479);
-        padding: 25px;
-        border-radius: 10px;
- }
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:wght@500&display=swap');
 
- input{
-    width: 100%;
-    display: block;
-    padding: 5px;
-    box-sizing: border-box;
-    margin-bottom: 10px;
- }
+* {
+   margin: 0;
+   padding: 0;
+   outline: 0;
+   box-sizing: border-box;
+
+}
+
+h1{
+   font-family: 'Mochiy Pop One', sans-serif;
+   color: #f1dfd6;
+   margin-bottom: 20px;
+}
+
+h2{
+   font-family: 'Mochiy Pop One', sans-serif;
+   font-family: 'Poppins', sans-serif;
+   color: rgb(61,35,20);
+}
+
+
+
+p{
+   color:rgb(241,223,214);
+   font-family: 'Mochiy Pop One', sans-serif;
+   font-family: 'Poppins', sans-serif;
+}
+
+input{
+   width: 80%;
+   padding: 10px;
+   margin-bottom: 15px;
+   border: none;
+   border-radius: 10px;
+   text-align: center;
+}
+
+.botao{
+   width: 150px;
+   height: 40px;
+   font-family: 'Mochiy Pop One', sans-serif;
+   font-family: 'Poppins', sans-serif;
+   font-size: large;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   border-radius: 50px;
+   background: rgb(178,138,118);
+   color: rgb(255, 255, 255);
+   border: none;
+   transition: background 0.5s;
+}
+.botao:hover{
+      background: rgb(140,108,93) ;
+}
+
+.fundo{
+   display: grid;
+   grid-template-columns: 400px auto;
+   background-color: rgb(241,223,214) ;
+}
+
+.container{
+   text-align: center;
+   position: sticky;
+   top:0;
+   font-family:Arial, Helvetica, sans-serif;
+   width: 400px;
+   height: 100vh;
+   background-color:rgb(100,50,28);
+   padding: 15px;
+   border-radius: 0px 20px 20px 0px;
+}
+
+.painel{
+   margin: 100px;
+}
+
+.calc{
+   font-family: 'Mochiy Pop One', sans-serif;
+   font-family: 'Poppins', sans-serif;
+   color: rgb(62, 35, 20);
+   padding-top: 20px;
+   padding-left: 10px;
+   animation: 2s;
+   animation-name: piscar;
+   text-align: center;
+}
+@keyframes piscar{
+   from{
+      opacity: 0;
+   }
+   to{
+      opacity: 1;
+   }
+}
+
